@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com/"
+           review="https://android-review.googlesource.com/" />
+  <default revision="master"
+           remote="aosp"
+           sync-j="4" />
+
+  <project path="build" name="platform/build" groups="pdk,tradefed" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project path="external/libcxx" name="platform/external/libcxx" groups="pdk" />
+  <project path="external/libcxxabi" name="platform/external/libcxxabi" groups="pdk" />
+  <project path="external/libselinux" name="platform/external/libselinux" groups="pdk" />
+  <project path="external/openssl" name="platform/external/openssl" groups="pdk" />
+  <project path="external/pcre" name="platform/external/pcre" groups="pdk-cw-fs" />
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
+  <project path="prebuilts/clang/darwin-x86/host/3.6" name="platform/prebuilts/clang/darwin-x86/host/3.6" groups="pdk,darwin" />
+  <project path="system/core" name="platform/system/core" groups="pdk" />
+  <project path="system/extras" name="platform/system/extras" groups="pdk" />
+
+</manifest>
